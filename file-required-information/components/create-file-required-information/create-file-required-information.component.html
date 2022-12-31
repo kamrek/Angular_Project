@@ -1,0 +1,311 @@
+<loading-image [is-loading]="isLoading"></loading-image>
+
+<div class="container-fluid pb-3" style="padding-left: 4%; padding-right: 4%;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-title"
+                style="color: #2D5903; font-weight: 900; font-size: 22px; padding-top: 15px; padding-left: 20px;">
+                {{'Required Information'}}
+            </div>
+            <hr style="color: #2D5903; background-color: #2D5903; border-width: 5; margin-top: -5px;">
+        </div>
+
+
+        <div class="col-md-12 pb-5">
+            <!-- <div class="heading-row">
+                Check-in Details
+            </div> -->
+
+            <p-fieldset legend="Check-in Details" [toggleable]="true">
+                <div class="" style="padding-bottom: 15px;">
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="file_name" style="padding-top: 5px">File Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="file_name" id="file_name"
+                                        pInputText placeholder="{{'File Name' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="barcode_id" style="padding-top: 5px">BarCode ID</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="barcode_id" id="barcode_id"
+                                        pInputText placeholder="{{'Barcode ID' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="check_in_time" style="padding-top: 5px">Check-in
+                                        Time</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="check_in_time" id="check_in_time"
+                                        pInputText placeholder="{{'Check-in Time' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5 class="d-flex justify-content-center">Barcode</h5>
+                                </div>
+                                <div class="thumbnail photoid" id="photo-id-front">
+                                    <pinch-zoom #myPinch="pinchZoom" disableZoomControl="disable"
+                                        style="border-color: #2D5903; border-width: 5;">
+                                        <img alt="Barcode" style="width: 100%; height: 100%;" />
+                                    </pinch-zoom>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="check_in_date" style="padding-top: 5px">Check-in
+                                        Date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p-calendar [maxDate]="maxDate" [minDate]="minDate" [monthNavigator]="true"
+                                        [showIcon]="true" [yearNavigator]="true" dateFormat="dd/mm/yy"
+                                        formControlName="check_in_date" id="check_in_date"
+                                        placeholder="{{'Check-in Date' }}" yearRange="2000:2022"></p-calendar>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="current_room" style="padding-top: 5px">Current
+                                        Room</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="current_room" id="current_room"
+                                        pInputText placeholder="{{'Current Room' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center pt-5">
+                        <button class="p-button-info" icon="pi pi-check" label="{{'Submit'}}" pButton pRipple
+                            type="button"></button>
+                        <button class="p-button-info btn-cancel ml-3" icon="pi pi-times" label="{{'Cancel'}}" pButton
+                            pRipple type="button"></button>
+                    </div>
+                </div>
+
+            </p-fieldset>
+
+
+            <!-- <div class="row pl-4 pr-4">
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="required" for="file_name" style="padding-top: 5px">File Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="inputfield w-full" formControlName="file_name" id="file_name" pInputText
+                                placeholder="{{'File Name' }}" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="required" for="barcode_id" style="padding-top: 5px">BarCode ID</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="inputfield w-full" formControlName="barcode_id" id="barcode_id" pInputText
+                                placeholder="{{'Barcode ID' }}" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pl-4 pr-4">
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="required" for="check_in_time" style="padding-top: 5px">Check-in Time</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="inputfield w-full" formControlName="check_in_time" id="check_in_time"
+                                pInputText placeholder="{{'Check-in Time' }}" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="d-flex justify-content-center">Barcode</h5>
+                        </div>
+                        <div class="thumbnail photoid" id="photo-id-front">
+                            <pinch-zoom #myPinch="pinchZoom" disableZoomControl="disable"
+                                style="border-color: #2D5903; border-width: 5;">
+                                <img alt="Barcode" style="width: 100%; height: 100%;" />
+                            </pinch-zoom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pl-4 pr-4">
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="required" for="check_in_date" style="padding-top: 5px">Check-in Date</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p-calendar [maxDate]="maxDate" [minDate]="minDate" [monthNavigator]="true"
+                                [showIcon]="true" [yearNavigator]="true" dateFormat="dd/mm/yy"
+                                formControlName="check_in_date" id="check_in_date" placeholder="{{'Check-in Date' }}"
+                                yearRange="2000:2022"></p-calendar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pl-4 pr-4">
+                <div class="col-md-6 pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="required" for="current_room" style="padding-top: 5px">Current Room</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="inputfield w-full" formControlName="current_room" id="current_room" pInputText
+                                placeholder="{{'Current Room' }}" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center pt-5">
+                <button class="p-button-info" icon="pi pi-check" label="{{'Submit'}}" pButton pRipple
+                    type="button"></button>
+                <button class="p-button-info btn-cancel ml-3" icon="pi pi-times" label="{{'Cancel'}}" pButton pRipple
+                    type="button"></button>
+            </div> -->
+        </div>
+
+
+        <div class="col-md-12">
+            <!-- <div class="heading-row">
+                Check-out Details
+            </div> -->
+
+            <p-fieldset legend="Check-out Details" [toggleable]="true" [collapsed]="true">
+                <div class="" style="padding-bottom: 15px;">
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="file_name" style="padding-top: 5px">File Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="file_name" id="file_name"
+                                        pInputText placeholder="{{'File Name' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="barcode_id" style="padding-top: 5px">BarCode ID</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="barcode_id" id="barcode_id"
+                                        pInputText placeholder="{{'Barcode ID' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="code" style="padding-top: 5px">Check-out Time</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="code" id="code" pInputText
+                                        placeholder="{{'Check-out Time' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5 class="d-flex justify-content-center">Barcode</h5>
+                                </div>
+                                <div class="thumbnail photoid" id="photo-id-front">
+                                    <pinch-zoom #myPinch="pinchZoom" disableZoomControl="disable"
+                                        style="border-color: #2D5903; border-width: 5;">
+                                        <img alt="Barcode" style="width: 100%; height: 100%;" />
+                                    </pinch-zoom>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="check_out_date" style="padding-top: 5px">Check-out
+                                        Date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p-calendar [maxDate]="maxDate" [minDate]="minDate" [monthNavigator]="true"
+                                        [showIcon]="true" [yearNavigator]="true" dateFormat="dd/mm/yy"
+                                        formControlName="check_out_date" id="check_out_date"
+                                        placeholder="{{'Check-out Date' }}" yearRange="2000:2022"></p-calendar>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pl-4 pr-4">
+                        <div class="col-md-6 pt-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="required" for="current_room" style="padding-top: 5px">Current
+                                        Room</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="inputfield w-full" formControlName="current_room" id="current_room"
+                                        pInputText placeholder="{{'Current Room' }}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center pt-5">
+                        <button class="p-button-info" icon="pi pi-check" label="{{'Submit'}}" pButton pRipple
+                            type="button"></button>
+                        <button class="p-button-info btn-cancel ml-3" icon="pi pi-times" label="{{'Cancel'}}" pButton
+                            pRipple type="button"></button>
+                    </div>
+                </div>
+            </p-fieldset>
+        </div>
+    </div>
+</div>
+
+<p-toast position="bottom-right"></p-toast>
