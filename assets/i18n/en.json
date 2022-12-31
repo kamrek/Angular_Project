@@ -1,0 +1,31 @@
+{
+    "FileEntry_TopMenu": "File Entry",
+    "/file_basic_information": "Basic Information",
+    "/file_required_information": "Required Information",
+    "FileList_TopMenu": "File List",
+
+    "Office_TopMenu": "Office",
+    "/offices": "Office",
+    "/create-office":"Add New Office",
+    "Update Office":"Update Office",
+    "Office Code":"Office Code",
+    "Office Name":"Office Name",
+    "Office Address1":"Office Address1",
+    "Office Address2":"Office Address2",
+    "Update":"Update",
+    "OfficeSection_TopMenu":"Office Section",
+    "/office_sections": "Office Section",
+
+    "Dashboard_TopMenu": "Dashboard",
+    "/dashboard": "Dashboard",
+    "role": "Role",
+    "users": "Users",
+
+    
+    "Change Password": "Change Password",
+    "Confirm Password required": "Confirm Password required",
+    "Confirm Password": "Confirm Password",
+    "Confirm Your New Password": "Confirm Your New Password",
+    "Congratulations": "Congratulations"
+    
+}
