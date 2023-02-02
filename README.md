@@ -1,9 +1,9 @@
-# CAAMS
+# AMS
 
-Customs Automation Asset Management System
+ Asset Management System
 
 ## Description
-CAAMS provides features to efficiently manage the IT assets of an organization. 
+AMS provides features to efficiently manage the IT assets of an organization. 
 
 ## Technology Stack
 
